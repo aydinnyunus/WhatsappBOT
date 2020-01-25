@@ -21,6 +21,8 @@ Third Option : If you want send one message many person,you should choice this o
 ![github-small](images/Option3.jpeg)
 
 Fourth Option : This option provides if you busy with your job and forget send important message to anyone.Just use it set hour and seconds just like "12:00".
+
 ![github-small](images/Option4.jpeg)
+
 
 It is my first application with GUI.
