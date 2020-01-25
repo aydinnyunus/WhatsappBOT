@@ -29,6 +29,6 @@ It is my first application with GUI.Thank you !.
 
 https://github.com/aydinnyunus/WhatsappBOT
 
-https://instagram.com/aydinyunus_
+https://instagram.com/aydinyunus_/
 
 https://linkedin.com/in/yunus-ayd%C4%B1n-b9b01a18a/
