@@ -1,5 +1,6 @@
 # WhatsappBOT
 Send messages to any person in any time.
+Just change the chromedriver or geckodriver location in WhatsappBot.py and enjoy it.
 
 This is the Main Page of the application.First Option provides send as many messages as you want to a person.
 ![github-small](images/Main.jpeg)
@@ -9,6 +10,7 @@ This is the input part.You enter Phone Number with country code,Message and Numb
 ![github-small](images/Option1.jpeg)
 
 Result of the First Option.I tried send "Merhaba" ten times.
+
 ![github-small](images/Option1R.jpeg)
 
 This is the Second Option.This provides send message in specific month and day.You can add all of your relationships in the input part.Input part saves input in the "birthday.json" and you run the program it's  control the dates and if it matches,bot send it.
