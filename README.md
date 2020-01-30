@@ -2,6 +2,8 @@
 Send messages to any person in any time.
 Just change the chromedriver or geckodriver location in WhatsappBot.py and enjoy it.
 
+*pip install -r requirements.txt
+
 This is the Main Page of the application.First Option provides send as many messages as you want to a person.
 ![github-small](images/Main.jpeg)
 
