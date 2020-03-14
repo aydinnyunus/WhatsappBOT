@@ -32,8 +32,8 @@ canvas1.itemconfigure(cid, fill="blue")
 # canvas1.create_line(55, 85, 155, 85, 105, 180, 55, 85)
 # canvas1.create_text(400, 10, fill="black", font="Times 20 italic bold",
 #                  text="Whatsapp Bot")
-gif1 = tk.PhotoImage(file='GZd3Pv.png')
-gif2 = tk.PhotoImage(file='9022c3da331305796ded3dda4c619df0.png')
+gif1 = tk.PhotoImage(file='images/GZd3Pv.png')
+#gif2 = tk.PhotoImage(file='images/9022c3da331305796ded3dda4c619df0.png')
 
 # put gif image on canvas
 # pic's upper left corner (NW) on the canvas is at x=50 y=10
