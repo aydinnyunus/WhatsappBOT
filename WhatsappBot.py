@@ -33,11 +33,11 @@ canvas1.itemconfigure(cid, fill="blue")
 # canvas1.create_text(400, 10, fill="black", font="Times 20 italic bold",
 #                  text="Whatsapp Bot")
 gif1 = tk.PhotoImage(file='images/GZd3Pv.png')
-#gif2 = tk.PhotoImage(file='images/9022c3da331305796ded3dda4c619df0.png')
+# gif2 = tk.PhotoImage(file='images/9022c3da331305796ded3dda4c619df0.png')
 
 # put gif image on canvas
 # pic's upper left corner (NW) on the canvas is at x=50 y=10
-canvas1.create_image(400, 350, image=gif2)
+#canvas1.create_image(400, 350, image=gif2)
 
 # put gif image on canvas
 # pic's upper left corner (NW) on the canvas is at x=50 y=10
@@ -452,7 +452,6 @@ def greenSelection(event=None):
             result = resultHour + resultMin
             print(result)
 
-
             if hour == now.hour and minutes == now.minute:
                 driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver")
                 driver.get("http://web.whatsapp.com")
@@ -552,7 +551,7 @@ def choose():
 
     elif selection == 2:
 
-        
+
 
     elif selection == 3:
 
