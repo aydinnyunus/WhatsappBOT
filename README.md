@@ -12,6 +12,30 @@
  - Install all the libraries mentioned in [requirements.txt](https://github.com/aydinnyunus/WhatsappBOT/blob/master/requirements.txt) using  `pip install -r requirements.txt`
  - Run Python file  `python WhatsappBot.py`
  
+# Directory Tree :cactus:
+```bash
+.
+├── birthdays.json
+├── chromedriver
+├── executable
+│   ├── 9022c3da331305796ded3dda4c619df0.png
+│   ├── GZd3Pv.png
+│   └── test
+├── geckodriver
+├── images
+│   ├── GZd3Pv.png
+│   ├── Main.jpeg
+│   ├── Option1.jpeg
+│   ├── Option1R.jpeg
+│   ├── Option2.jpeg
+│   ├── Option3.jpeg
+│   └── Option4.jpeg
+├── README.md
+├── requirements.txt
+└── WhatsappBot.py
+
+2 directories, 16 files
+```
  
  ## ScreenShot :camera_flash:
 
