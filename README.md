@@ -1,6 +1,6 @@
-# WhatsappBOT
-Send messages to any person in any time.
-Just change the chromedriver or geckodriver location in WhatsappBot.py and enjoy it.
+# WhatsappBOT :robot:
+ - Send messages to any person in any time.
+ - Just change the chromedriver or geckodriver location in WhatsappBot.py and enjoy it.
 
 *pip install -r requirements.txt
 
