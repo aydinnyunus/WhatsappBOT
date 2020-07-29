@@ -37,17 +37,16 @@
 2 directories, 16 files
 ```
  
- ## ScreenShot :camera_flash:
+## ScreenShot :camera_flash:
 
-This is the Main Page of the application.First Option provides send as many messages as you want to a person.
+**1).** This is the Main Page of the application. First Option provides send as many messages as you want to a person. <br><br>
 ![github-small](images/Main.jpeg)
 
-This is the input part.You enter Phone Number with country code,Message and Number of Messages.I don't try the maximum message capacity but you can try.
+**2).** This is the input part. You enter Phone Number with country code, Message and Number of Messages. I don't try the maximum message capacity but you can try.  <br><br>
 
 ![github-small](images/Option1.jpeg)
 
-Result of the First Option.I tried send "Merhaba" ten times.
-
+**3).** Result of the First Option. I tried send to 'Merhaba' ten times. <br><br>
 ![github-small](images/Option1R.jpeg)
 
 This is the Second Option.This provides send message in specific month and day.You can add all of your relationships in the input part.Input part saves input in the "birthday.json" and you run the program it's  control the dates and if it matches,bot send it.
