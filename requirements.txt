@@ -1,7 +1,7 @@
 asgiref==3.2.3
 Django==3.0.3
 image==1.5.27
-Pillow==7.0.0
+Pillow
 pytz==2019.3
 selenium==3.141.0
 sqlparse==0.3.0
