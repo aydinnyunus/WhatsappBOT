@@ -5,5 +5,4 @@ Pillow==7.0.0
 pytz==2019.3
 selenium==3.141.0
 sqlparse==0.3.0
-python-tk==2.7.17-1~18.04
 urllib3==1.25.7
