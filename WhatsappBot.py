@@ -97,9 +97,9 @@ def blueSelection(event=None):
 
         phone_number = int(e3.get())
 
-        if len(str(phone_number)) != 12:
+        if len(str(phone_number)) < 9:
             m1 = tk.Label(master,
-                          text="ERROR : Please enter 12 digits for Phone Number.", fg="red", bg="black")
+                          text="ERROR : Please enter minimum 9 digits for Phone Number.", fg="red", bg="black")
 
             canvas1.create_window(250, 200, window=m1)
             m1.after(5000, m1.destroy)
@@ -282,7 +282,7 @@ def orangeSelection(event=None):
             phone_number = int(phone_number)
         except:
             m1 = tk.Label(master,
-                          text="ERROR : Please enter 12 digits for Phone Number.", fg="red", bg="black")
+                          text="ERROR : Please enter minimum 9 digits for Phone Number.", fg="red", bg="black")
 
             canvas1.create_window(250, 200, window=m1)
             m1.after(5000, m1.destroy)
@@ -389,7 +389,7 @@ def redSelection(event=None):
             phone_number = int(phone_number)
         except:
             m1 = tk.Label(master,
-                          text="ERROR : Please enter 12 digits for Phone Number.", fg="red", bg="black")
+                          text="ERROR : Please enter minimum 9 digits for Phone Number.", fg="red", bg="black")
 
             canvas1.create_window(250, 200, window=m1)
             m1.after(5000, m1.destroy)
