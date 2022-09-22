@@ -105,7 +105,7 @@ def blueSelection(event=None):
             m1.after(5000, m1.destroy)
         else:
             phone_number = [phone_number]
-            driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
