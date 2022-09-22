@@ -11,11 +11,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 now = datetime.now()
 
-# driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver")
+# driver = webdriver.Chrome(executable_path="./chromedriver")
 
 #Keep the current chrome session
 options = webdriver.ChromeOptions()
-options.add_argument('--user-data-dir=./User_Data')
+#options.add_argument('--user-data-dir=./User_Data')
+options.add_argument("--no-sandbox");
+options.add_argument("--disable-dev-shm-usage");
 
 master = tk.Tk()
 master.title("Whatsapp Bot")
@@ -123,19 +125,25 @@ def blueSelection(event=None):
                     is_connected()
 
             def send_whatsapp_msg(driver, phone_no, text, no):
-                sleep(5)
+                sleep(2)
                 driver.get("https://web.whatsapp.com/send?phone={}&source=&data=#".format(phone_no))
 
                 try:
-                    sleep(7)
-                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]', 30)
-                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div', 30)
+                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div')
                     for x in range(no):
+                        print(x)
                         txt_box.send_keys(text)
                         txt_box.send_keys("\n")
+                        #sleep(40)
 
                 except Exception as e:
+                    print(e)
                     print("Invalid Phone Number:" + str(phone_no))
+                    for x in range(no):
+                        print(x)
+                        txt_box.send_keys(text)
+                        txt_box.send_keys("\n")
 
             for mobile_no in phone_number:
                 try:
@@ -143,7 +151,7 @@ def blueSelection(event=None):
                     send_whatsapp_msg(driver, mobile_no, message_text, no_of_message)
 
                 except Exception as e:
-                    sleep(10)
+                    sleep(5)
                     is_connected()
 
     c1 = tk.Button(text='Send', command=Driver, bg='blue', fg='white',
@@ -181,7 +189,7 @@ def orangeSelection(event=None):
 
         for p in data:
             if int(p['birth_month']) == now.strftime("%m") and int(p['birth_day']) == now.strftime("%d"):
-                driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
                 driver.get("http://web.whatsapp.com")
                 sleep(15)  # wait time to scan the code in second
 
@@ -204,8 +212,8 @@ def orangeSelection(event=None):
 
             try:
                 sleep(7)
-                element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]', 30)
-                txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+                element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div', 30)
+                txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div')
                 for m in data:
                     txt_box.send_keys(m['message_text'])
                     txt_box.send_keys("\n")
@@ -217,7 +225,7 @@ def orangeSelection(event=None):
         for mobile_no in data:
             try:
                 print(mobile_no['birth_month'])
-                driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
                 if mobile_no['birth_month'] == now.strftime("%m") and mobile_no['birth_day'] == now.strftime("%d"):
                     mobile_no = mobile_no['no']
                     print(mobile_no)
@@ -343,7 +351,7 @@ def redSelection(event=None):
             canvas1.create_window(250, 140, window=m1)
             m1.after(5000, m1.destroy)
         else:
-            driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
@@ -366,8 +374,8 @@ def redSelection(event=None):
 
                 try:
                     sleep(7)
-                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]', 30)
-                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div', 30)
+                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div')
                     txt_box.send_keys(text)
                     txt_box.send_keys("\n")
 
@@ -457,10 +465,10 @@ def greenSelection(event=None):
             print(result)
 
             if hour == now.hour and minutes == now.minute:
-                driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
                 driver.get("http://web.whatsapp.com")
                 sleep(15)  # wait time to scan the code in second
-            driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
@@ -483,8 +491,8 @@ def greenSelection(event=None):
 
                 try:
                     sleep(7)
-                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]', 30)
-                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+                    element_presence(driver, By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div', 30)
+                    txt_box = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div')
 
                     sleep(result)
 
@@ -571,7 +579,7 @@ def choose():
         phone_number = liste[0]
         print(phone_number)
 
-        driver = webdriver.Chrome(executable_path="/home/aydinnyunus/Downloads/Birthday-master/chromedriver", options=options)
+        driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
         driver.get("http://web.whatsapp.com")
         sleep(15)  # wait time to scan the code in second
 
