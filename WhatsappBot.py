@@ -4,11 +4,14 @@ from datetime import datetime
 from time import sleep
 import time
 import json
+# added bu the one
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+# from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
 now = datetime.now()
 
 # driver = webdriver.Chrome(executable_path="./chromedriver")
@@ -107,7 +110,8 @@ def blueSelection(event=None):
             m1.after(5000, m1.destroy)
         else:
             phone_number = [phone_number]
-            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+            # driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
