@@ -193,7 +193,7 @@ def orangeSelection(event=None):
 
         for p in data:
             if int(p['birth_month']) == now.strftime("%m") and int(p['birth_day']) == now.strftime("%d"):
-                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
                 driver.get("http://web.whatsapp.com")
                 sleep(15)  # wait time to scan the code in second
 
@@ -229,7 +229,7 @@ def orangeSelection(event=None):
         for mobile_no in data:
             try:
                 print(mobile_no['birth_month'])
-                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
                 if mobile_no['birth_month'] == now.strftime("%m") and mobile_no['birth_day'] == now.strftime("%d"):
                     mobile_no = mobile_no['no']
                     print(mobile_no)
@@ -355,7 +355,7 @@ def redSelection(event=None):
             canvas1.create_window(250, 140, window=m1)
             m1.after(5000, m1.destroy)
         else:
-            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
@@ -469,10 +469,10 @@ def greenSelection(event=None):
             print(result)
 
             if hour == now.hour and minutes == now.minute:
-                driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
                 driver.get("http://web.whatsapp.com")
                 sleep(15)  # wait time to scan the code in second
-            driver = webdriver.Chrome(executable_path="./chromedriver", options=options)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
             driver.get("http://web.whatsapp.com")
             sleep(15)  # wait time to scan the code in second
 
